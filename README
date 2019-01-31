@@ -1,0 +1,11 @@
+
+README
+
+https://ziplocationapp.azurewebsites.net/ - Web App
+https://ziplocationapp.azurewebsites.net/swagger - Api Definition 
+
+ZipApi/StartUp.cs - //Service registrations
+ZipApi/Services - //This is where the logic for storing and pulling lives
+ZipApi/ClientApp/src/app - //This is where the frontend lives
+ZipTest - //Service tests are here
+

@@ -1,0 +1,37 @@
+<div class="container d-inline-block">
+  <h2 class="float-left">Locations</h2>
+  <button (click)="loadData()" type="button" class="btn btn-primary float-right">LoadData</button>
+</div>
+
+<div class="container">
+  <div class="form-group col-sm-6">
+    <div class="form-inline">
+      <input [(ngModel)]="zipcode" type="text" class="form-control" placeholder="Enter Zip">
+      <button (click)="getLocationData(zipcode)" type="button" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+  <div class="row" *ngIf="locations">
+    <div class="col-sm-12">
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th>Zip</th>
+            <th>CBSA</th>
+            <th>MSA</th>
+            <th>Pop2014</th>
+            <th>Pop2015</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let location of locations">
+            <td>{{ location.zip }}</td>
+            <td>{{ location.cbsa }}</td>
+            <td>{{ location.msa }}</td>
+            <td>{{ location.pop2014 }}</td>
+            <td>{{ location.pop2015 }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
